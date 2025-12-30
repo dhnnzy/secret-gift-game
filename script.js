@@ -6,9 +6,6 @@ const fixedRules = {
   "venus": "AARUSH GUPTA",
   "venus chaudhary": "AARUSH GUPTA",
 
-  "vidhi": "DHANANJAY GAUTAM",
-  "vidhi mishra": "DHANANJAY GAUTAM",
-
   "saumya": "MAANAS VAID",
   "soumya": "MAANAS VAID",
   "saumya agarwal": "MAANAS VAID",
