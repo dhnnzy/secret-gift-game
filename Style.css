@@ -1,85 +1,136 @@
-body {
-  margin: 0;
-  font-family: 'Comic Sans MS', 'Poppins', cursive;
-  background: radial-gradient(circle, #fff7c2, #ffd84d);
-  text-align: center;
+body{
+  margin:0;
+  font-family:'Patrick Hand',cursive;
+  background:
+    radial-gradient(circle at top,#fff9c4,#ffd54f 40%,#ffca28 100%);
+  text-align:center;
+  min-height:100vh;
+  overflow-x:hidden;
 }
 
-.game {
-  max-width: 380px;
-  margin: 70px auto;
-  padding: 20px;
+/* 🎮 GAME CARD */
+.game{
+  max-width:390px;
+  margin:60px auto;
+  padding:25px 20px 40px;
+  background:rgba(255,255,255,.35);
+  border-radius:24px;
+  backdrop-filter:blur(6px);
+  box-shadow:0 25px 50px rgba(0,0,0,.25);
 }
 
-h1 {
-  margin-bottom: 10px;
+h1{
+  margin:0 0 6px;
+  font-size:28px;
 }
 
-input {
-  width: 85%;
-  padding: 12px;
-  border-radius: 30px;
-  border: none;
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 15px;
+p{
+  margin:0 0 18px;
+  font-size:16px;
 }
 
-button {
-  padding: 12px 30px;
-  font-size: 16px;
-  background: #ffb703;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+/* ✍️ INPUT */
+input{
+  width:88%;
+  padding:14px;
+  border-radius:30px;
+  border:none;
+  font-size:17px;
+  text-align:center;
+  margin-bottom:18px;
+  outline:none;
+  box-shadow:inset 0 4px 8px rgba(0,0,0,.15);
 }
 
-button:active {
-  transform: scale(0.95);
+/* 🔘 BUTTON */
+button{
+  padding:14px 34px;
+  font-size:18px;
+  background:linear-gradient(135deg,#ff9800,#ff5722);
+  color:#fff;
+  border:none;
+  border-radius:40px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
-/* 🟨 CHIT STYLE */
-.chit {
-  width: 260px;
-  height: 160px;
-  margin: 40px auto;
-  background: #ffeb3b;
-  border-radius: 6px;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-  transform-origin: top;
-  transition: transform 0.6s ease;
-  display: none;
-  position: relative;
+button:active{
+  transform:scale(.94);
 }
 
-/* folded look */
-.chit::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: #fdd835;
-  border-radius: 6px 6px 0 0;
+/* 🟨 CHIT */
+.chit{
+  width:270px;
+  height:170px;
+  margin:45px auto 20px;
+  border-radius:8px;
+  position:relative;
+  transform-origin:top;
+  transition:transform .6s ease;
+  display:none;
+  box-shadow:
+    0 18px 30px rgba(0,0,0,.35),
+    inset 0 0 0 1px rgba(0,0,0,.08);
+  background:
+    linear-gradient(135deg,#fff176 0%,#fbc02d 100%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,.08),
+      rgba(255,255,255,.08) 1px,
+      transparent 1px,
+      transparent 4px
+    );
 }
 
-.chit.closed {
-  transform: scaleY(0.1);
+/* 📎 TAPE EFFECT */
+.chit::before{
+  content:"";
+  position:absolute;
+  top:-18px;
+  left:50%;
+  transform:translateX(-50%) rotate(-2deg);
+  width:90px;
+  height:28px;
+  background:rgba(255,255,255,.6);
+  border-radius:6px;
+  box-shadow:0 4px 10px rgba(0,0,0,.25);
 }
 
-.chit.open {
-  transform: scaleY(1);
+/* 📄 FOLD SHADOW */
+.chit::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:18px;
+  background:linear-gradient(to bottom,rgba(0,0,0,.12),transparent);
+  border-radius:0 0 8px 8px;
 }
 
-/* inner text */
-.chit-inner {
-  padding-top: 60px;
+.chit.closed{
+  transform:scaleY(.1);
 }
 
-.chit-inner p {
-  font-size: 20px;
-  font-weight: bold;
+.chit.open{
+  transform:scaleY(1);
+}
+
+/* 🖋️ NAME INSIDE */
+.chit-inner{
+  padding-top:70px;
+}
+
+.chit-inner p{
+  font-size:24px;
+  font-weight:bold;
+  letter-spacing:.5px;
+}
+
+/* 🔒 LOCK TEXT */
+#lockMsg{
+  margin-top:10px;
+  font-size:13px;
+  color:#333;
 }
