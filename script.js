@@ -110,7 +110,10 @@ function reveal() {
 
   document.getElementById("result").innerText =
     "🎉 You got: " + assigned;
-  document.getElementById("card").style.display = "block";
+  const card = document.getElementById("card");
+card.style.display = "block";
+card.classList.remove("closed");
+card.classList.add("open");
 }
 
 function removeFromPool(name) {
