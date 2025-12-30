@@ -1,4 +1,46 @@
-<div class="chit closed" id="card">
-  <div class="chit-inner">
-    <p id="result"></p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secret Chit Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Handwritten Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="game">
+    <h1>🎁 Secret Chit Game</h1>
+    <p>Enter your name and open your chit</p>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <br>
+    <button onclick="revealName()">Open Chit</button>
+
+    <!-- Yellow Chit -->
+    <div class="chit closed" id="card">
+      <div class="chit-inner">
+        <p id="result"></p>
+      </div>
+    </div>
+
+    <!-- Lock message -->
+    <p id="lockMsg" style="display:none;font-size:12px;color:#555">
+      🔒 Chit locked. You can’t play again.
+    </p>
   </div>
+
+  <!-- Sound -->
+  <audio id="paperSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Your JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
