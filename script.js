@@ -1,7 +1,5 @@
-// 🔗 Google Apps Script Web App URL
 const DATA_URL = "https://script.google.com/macros/s/AKfycbx2_Kt4wxKpQIb5k_AM6H7GltivF49CmjULrwJPMj3o8SdzjMix5uxSzvzfFrZVZK0aTw/exec";
 
-// 🎯 Fixed plot-twist rules
 const fixedRules = {
   "venus": "AARUSH GUPTA",
   "venus chaudhary": "AARUSH GUPTA",
@@ -14,7 +12,6 @@ const fixedRules = {
   "garima dhulia": "VIDHI MISHRA"
 };
 
-// 🎁 FULL AVAILABLE NAME POOL (fixed receivers REMOVED)
 let availableNames = [
 "AASTHA ROHILA","ABHINAV RAJ SINGH","ABHISHEK KUMAR",
 "ABHISHEK PRATAP SINGH","ABHISHEK VERMA","ADARSH MAURYA",
